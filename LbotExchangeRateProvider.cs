@@ -35,6 +35,7 @@ namespace Nop.Plugin.ExchangeRate.LbotExchange
 
         /// <summary>
         /// Gets currency live rates
+        /// Rate Url is : https://mybank.landbank.com.tw/Sign/SIGN_finf_01/Index?ERType=Cash
         /// </summary>
         /// <param name="exchangeRateCurrencyCode">Exchange rate currency code</param>
         /// <returns>Exchange rates</returns>
