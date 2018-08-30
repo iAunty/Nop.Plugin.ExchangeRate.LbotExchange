@@ -64,9 +64,11 @@ namespace Nop.Plugin.ExchangeRate.LbotExchange
             
                     foreach(var rate in rates.Result)
                     { 
+                        var currencyCode = rate.CCY;
+
                         ratesToTwd.Add(new Core.Domain.Directory.ExchangeRate()
                         {
-                            CurrencyCode = rate.CCY,
+                            CurrencyCode = currencyCode,
                             Rate = 1 / ((Convert.ToDecimal(rate.SpotBuy) + Convert.ToDecimal(rate.SpotSell)) / 2),
                             UpdatedOn = Convert.ToDateTime(rate.QuoDate)
                         });
